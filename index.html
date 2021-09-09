@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mov
+        {
+            position: absolute;
+            left: 500px;
+            top:100px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .ar
+        {
+            position: absolute;
+            left: 20px;
+            top:520px;
+            width: 100px;
+            height: 100px;
+            background: rgb(0, 255, 128);
+        }
+        .ab
+        {
+            position: absolute;
+            left: 20px;
+            top:320px;
+            width: 100px;
+            height: 100px;
+            background: rgb(76, 0, 255);
+        }
+        .der
+        {
+            position: absolute;
+            left: 1250px;
+            top:530px;
+            width: 100px;
+            height: 100px;
+            background: rgb(255, 208, 0);
+        }
+        .izq
+        {
+            position: absolute;
+            left: 1250px;
+            top:320px;
+            width: 100px;
+            height: 100px;
+            background: rgb(255, 38, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="mov" id="mo"></div>
+    <div class="ar" onmousemove="arriba()">Ar</div>
+    <div class="ab" onmousemove="abajo()">Ab</div>
+    <div class="der" onmousemove="derecha()">De</div>
+    <div class="izq" onmousemove="izquierda()">Iz</div>
+    <script>
+        y=100;
+        x=500;
+        function arriba()
+        {
+            y=y-10;
+            mo.style.top=y+"px"
+        }
+        function abajo()
+        {
+            y=y+10;
+            mo.style.top=y+"px"
+        }
+        function derecha()
+        {
+            x=x+10;
+            mo.style.left=x+"px"
+        }
+        function izquierda()
+        {
+            x=x-10;
+            mo.style.left=x+"px"
+        }
+    </script>
+</body>
+</html>
